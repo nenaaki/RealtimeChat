@@ -2,16 +2,15 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RealtimeChat.Server.Data;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RealtimeChat.Server.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201127102306_AddChatRoom")]
+    partial class AddChatRoom
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -379,7 +378,7 @@ namespace RealtimeChat.Server.Data.Migrations
                         {
                             Id = new Guid("40ad0799-0c05-409f-8503-699c02263641"),
                             CreatedDateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Random",
+                            Name = "ロビー",
                             UpdatedDateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });

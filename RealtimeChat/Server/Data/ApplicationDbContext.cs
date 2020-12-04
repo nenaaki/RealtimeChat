@@ -32,7 +32,7 @@ namespace RealtimeChat.Server.Data
             builder.Entity<Room>().HasData(
                 new Room[]
                 {
-                    new Room{ Id = Guid.NewGuid(), Name = "Random" }
+                    new Room{ Id = Guid.NewGuid(), Name = "ロビー" }
 
                 });
         }

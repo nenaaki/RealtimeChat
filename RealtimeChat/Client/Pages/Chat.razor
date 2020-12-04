@@ -1,4 +1,4 @@
-﻿@page "/chat"
+﻿@page "/chat/{roomId?}"
 @using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager NavigationManager
 @implements IDisposable
@@ -42,6 +42,16 @@
     private List<string> messages = new List<string>();
     private string userInput;
     private string messageInput;
+
+    [Parameter]
+    public string RoomId { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+
+    }
 
     protected override async Task OnInitializedAsync()
     {
